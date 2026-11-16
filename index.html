@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seni Sevmemin 200 Sebebi ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:
+        radial-gradient(ellipse at 50% 0%, #682442 0%, transparent 55%),
+        linear-gradient(135deg, #100914, #260d20, #100914);
+    color: #fff;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(#ffffff55 1px, transparent 1px),
+        radial-gradient(#ff9fc255 1px, transparent 1px);
+    background-size: 70px 70px, 110px 110px;
+    background-position: 0 0, 35px 45px;
+    opacity: .35;
+    pointer-events: none;
+}
+
+.container {
+    width: 92%;
+    max-width: 750px;
+    padding: 35px 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* GİRİŞ */
+
+#intro {
+    animation: introOpen 1.5s ease;
+}
+
+@keyframes introOpen {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(.9);
+        filter: blur(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.intro-small {
+    color: #ffc5d9;
+    font-size: clamp(28px, 6vw, 48px);
+    letter-spacing: 2px;
+}
+
+.big-number {
+    display: block;
+    font-size: clamp(120px, 28vw, 200px);
+    line-height: 1.05;
+    font-weight: bold;
+    color: #ff91ba;
+    text-shadow:
+        0 0 15px #ff5b9c,
+        0 0 40px #ff3f8a,
+        0 0 80px #a52b61;
+    animation: numberPulse 3s infinite alternate;
+}
+
+@keyframes numberPulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+.intro-bottom {
+    font-size: 30px;
+    letter-spacing: 9px;
+    color: #ffe4ee;
+}
+
+.intro-heart {
+    color: #ff83ae;
+    font-size: 28px;
+    margin-top: 25px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    40% { transform: scale(1); }
+    60% { transform: scale(1.15); }
+}
+
+button {
+    padding: 16px 34px;
+    border-radius: 50px;
+    border: 1px solid #ffb1ce;
+    background: linear-gradient(135deg, #d83e7d, #a92761);
+    color: white;
+    font-size: 17px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    box-shadow: 0 0 25px #ff4e9160;
+    transition: .35s;
+    margin-top: 35px;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px #ff4e91;
+    background: linear-gradient(135deg, #ff6da4, #c12d70);
+}
+
+/* SEBEPLER */
+
+#reasonScreen {
+    display: none;
+}
+
+.counter {
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: #ffbad2;
+    margin-bottom: 30px;
+}
+
+.reason-card {
+    padding: 45px 20px;
+    min-height: 270px;
+    border: 1px solid #ff9fc244;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #ffffff0d, #ff77a50b);
+    box-shadow:
+        0 0 35px #ff4f9120,
+        inset 0 0 30px #ff4f910b;
+    backdrop-filter: blur(10px);
+}
+
+.reason-number {
+    color: #ff8db8;
+    font-size: 75px;
+    text-shadow: 0 0 30px #ff4f91;
+    margin-bottom: 25px;
+}
+
+.reason {
+    font-size: clamp(27px, 6vw, 43px);
+    color: #fff0f6;
+    min-height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+}
+
+.show-number {
+    animation: numberEnter 1s ease both;
+}
+
+.show-reason {
+    animation: reasonEnter 1s ease both;
+}
+
+@keyframes numberEnter {
+    0% {
+        opacity: 0;
+        transform: scale(2) rotate(-8deg);
+        filter: blur(10px);
+    }
+    70% { transform: scale(.9); }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes reasonEnter {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.progress {
+    width: 100%;
+    height: 5px;
+    background: #60233e;
+    border-radius: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6a9f, #ffd1e1);
+    box-shadow: 0 0 15px #ff6a9f;
+    transition: width .7s ease;
+}
+
+/* FİNAL */
+
+#finalScreen {
+    display: none;
+    animation: finalEnter 1.5s ease both;
+}
+
+@keyframes finalEnter {
+    from {
+        opacity: 0;
+        transform: scale(.85) translateY(35px);
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+.final-heart {
+    font-size: 75px;
+    color: #ff83ae;
+    text-shadow: 0 0 40px #ff4f91;
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-title {
+    font-size: clamp(34px, 7vw, 55px);
+    color: #ffb2cc;
+    margin: 20px 0;
+}
+
+.final-text {
+    color: #ffe6ef;
+    font-size: 21px;
+    line-height: 1.8;
+    margin: 20px auto;
+}
+
+/* SON OLARAK BUTONU */
+
+#lastButton {
+    display: none;
+    animation: finalEnter 1.2s ease both;
+}
+
+/* SON SAYFA */
+
+#lastPage {
+    display: none;
+}
+
+.last-message {
+    font-size: clamp(27px, 6vw, 43px);
+    color: #ffe4ee;
+    line-height: 1.7;
+    text-shadow: 0 0 25px #ff4f9160;
+    animation: reasonEnter 1.5s ease both;
+}
+
+.last-highlight {
+    color: #ff8db8;
+    font-weight: bold;
+}
+
+.small-heart {
+    font-size: 55px;
+    color: #ff83ae;
+    margin-bottom: 30px;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* UÇUŞAN KALPLER */
+
+.floating-heart {
+    position: fixed;
+    bottom: -40px;
+    color: #ff8db8;
+    opacity: .4;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 550px) {
+    .reason-card {
+        padding: 35px 15px;
+        min-height: 240px;
+    }
+
+    .reason-number {
+        font-size: 60px;
+    }
+
+    .intro-bottom {
+        font-size: 23px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- GİRİŞ -->
+    <div id="intro">
+        <div class="intro-small">Seni Sevmemin</div>
+        <span class="big-number">200</span>
+        <div class="intro-bottom">SEBEBİ</div>
+        <div class="intro-heart">♥</div>
+        <button onclick="start()">Her Şeyin Bir Sebebi Var ❤️</button>
+    </div>
+
+    <!-- SEBEPLER -->
+    <div id="reasonScreen">
+        <div class="counter" id="counter">1 / 200</div>
+
+        <div class="reason-card">
+            <div class="reason-number show-number" id="number">1</div>
+            <div class="reason show-reason" id="reason"></div>
+        </div>
+
+        <div class="progress">
+            <div class="progress-fill" id="progress"></div>
+        </div>
+
+        <button id="nextButton" onclick="nextReason()">
+            Bir Sonraki Sebep ❤️
+        </button>
+    </div>
+
+    <!-- İLK FİNAL -->
+    <div id="finalScreen">
+        <div class="final-heart">♥</div>
+        <h1 class="final-title">200. Sen.</h1>
+
+        <p class="final-text">
+            Bütün bu sebepleri tek tek saysam da
+            aslında hepsinin ortak bir noktası var.
+            <br>
+            O da sensin.
+        </p>
+
+        <p class="final-text">
+            İyi ki varsın. ❤️
+        </p>
+
+        <button id="lastButton" onclick="openLastPage()">
+            Son Olarak...
+        </button>
+    </div>
+
+    <!-- SON SAYFA -->
+    <div id="lastPage">
+        <div class="small-heart">♥</div>
+
+        <div class="last-message">
+            Sen, her şeye rağmen seni sevmeyen,
+            <br><br>
+            sadece seni kullanmak isteyen
+            <br><br>
+            <span class="last-highlight">Berat'a gittin.</span>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+const reasons = [
+"Gülüşün",
+"Gözlerin",
+"Dudakların",
+"Sadakatin",
+"Zarafetin",
+"Kahkahan",
+"Saygın",
+"Mizah anlayışın",
+"İyiliğin",
+"Nazikliğin",
+"Şefkatin",
+"Zekân",
+"Kokun",
+"Hassasiyetin",
+"Bakışların",
+"Saçların",
+"Kararlılığın",
+"Tutkun",
+"Yumuşaklığın",
+"Görgün",
+"Sesin",
+"Caziben",
+"Enerjin",
+"Hayal gücün",
+"Cömertliğin",
+"Dürüstlüğün",
+"Zarifliğin",
+"Olgunluğun",
+"Samimiyetin",
+"Tarzın",
+"Doğal güzelliğin",
+"Sabırlılığın",
+"Sadelik anlayışın",
+"Otoriten",
+"Meraklı yapın",
+"Fedakârlığın",
+"Yaşam sevincin",
+"Moral desteğin",
+"Ciddiyetin",
+"Şefkatin",
+"Sevgin",
+"Koruyucu yapın",
+"Benzersiz mizah anlayışın",
+"Güçlü karakterin",
+"Kendine güvenin",
+"Keskin zekân",
+"Hedeflerin",
+"Organizasyon yeteneğin",
+"Şefkatin",
+"Beni mutlu etme yeteneğin",
+"İyi niyetliliğin",
+"Nazik tavırların",
+"Affetme kabiliyetin",
+"İçtenliğin",
+"Beni motive etmen",
+"Hayvanlara olan sevgin",
+"Güven veren bakışların",
+"Doğallığın",
+"Beni anlaman",
+"Huzur veren sesin",
+"Anlayışlılığın",
+"Kararlılığın",
+"Cesaretin",
+"Koruma içgüdün",
+"Çocukları sevmen",
+"Detaylara olan sevgin",
+"Sorunları çözme yeteneğin",
+"Olumlu tavrın",
+"Zarafetin",
+"Hassaslığın",
+"Cesaretin",
+"Hayata bağlılığın",
+"Masumiyetin",
+"Hayal gücün",
+"Ailenle olan bağın",
+"Çocuk gibi olman",
+"Oyun severliğin",
+"İyimserliğin",
+"Doğallığın",
+"Sıcakkanlılığın",
+"İlgili yapın",
+"Sabırlı oluşun",
+"Güzel tavsiyelerin",
+"Duygusal zekân",
+"Sorun çözme kabiliyetin",
+"Yaratıcılığın",
+"Dengeli oluşun",
+"Beni motive edişin",
+"Hayata pozitif bakışın",
+"Kendine olan inancın",
+"Beni anlamadaki başarın",
+"Akılcı yaklaşımın",
+"Hayvanlarla dostluğun",
+"İlham veren yapın",
+"Affedici ruhun",
+"Beni sakinleştirme gücün",
+"Çekiciliğin",
+"Enerji dolu yapın",
+"Dostane tavırların",
+"İçten duyguların",
+"Açık fikirliliğin",
+"Yeni şeyler öğrenme isteğin",
+"Sadeliğin",
+"Çekingen tavırların",
+"Farklı bakış açın",
+"Koruma arzun",
+"Yaşam tutkun",
+"Beni neşelendirme yeteneğin",
+"Kalbinin saflığı",
+"Beni dinleme şeklin",
+"Sorunlara çözüm bulmadaki ustalığın",
+"İnatçılığın",
+"Dostluğun",
+"Yaratıcı fikirlerin",
+"Akıllı düşüncelerin",
+"Derin düşüncelerin",
+"Kendine has özelliklerin",
+"Sorumluluk bilincin",
+"Paylaşma arzun",
+"Beni teselli etme yeteneğin",
+"Sadelikteki zarafetin",
+"Fedakârlıkların",
+"Beni hep desteklemen",
+"Hayat enerjin",
+"Mütevazılığın",
+"Beni olduğum gibi kabul etmen",
+"Kırılgan yapın",
+"Gülümsemenin sıcaklığı",
+"Kendi ayaklarının üzerinde durman",
+"Her zaman yanımda olman",
+"Yaşam sevincin",
+"Zorluklara karşı dayanıklılığın",
+"Mutlu etme arzun",
+"Küçük şeylerde mutluluğu bulman",
+"Akıcı konuşman",
+"Bana olan inancın",
+"İçindeki çocuğu kaybetmemen",
+"Yardımseverliğin",
+"Beni şaşırtma becerin",
+"Zekâ dolu bakışların",
+"Kendine has mizah anlayışın",
+"Yaratıcı düşüncelerin",
+"Güzel hayallerin",
+"Bana kattığın güzellikler",
+"İçindeki ışık",
+"Beni hayata bağlaman",
+"Seni sen yapan özelliklerin",
+"Bana olan sevgin",
+"Beni her zaman mutlu etmen",
+"Korkusuzca sevmen",
+"Beni düşündüğün anlar",
+"Sonsuz sabrın",
+"Bana ilham veren konuşmaların",
+"Derin hislerin",
+"Yaşam tarzın",
+"Duruşundaki güç",
+"Hedeflerin için azmin",
+"Zor durumlarda sergilediğin sakinlik",
+"Her zaman yanımda durman",
+"Kendine olan güvenin",
+"Gerçekçi hayallerin",
+"Beni tamamlaman",
+"Kendi güzelliğini fark etmen",
+"Beni anlaman",
+"Birlikte güldüğümüz anlar",
+"Yaşamına kattığın anlam",
+"Beni motive etmen",
+"Kırılganlıkların",
+"Beni iyileştirmen",
+"Beni düşündüğün o küçük anlar",
+"Sonsuz sevgin",
+"Yaşamına kattığın değerler",
+"Paylaşımcılığın",
+"Hayat dolu kahkahaların",
+"Sakin tavırların",
+"Zorluklara karşı direncin",
+"Beni her zaman önemsemen",
+"Beni güçlü hissettirmen",
+"Her şeyden önce sevgin",
+"Beni ne kadar önemsediğin",
+"Yaşama olan tutkun",
+"İçindeki güzellik",
+"Saf sevgin",
+"Bana kattığın güzellikler",
+"Derin bakışların",
+"İlham dolu sözlerin",
+"Beni nasıl dinlediğin",
+"Kendi ışığınla parlaman",
+"Beni cesaretlendirmen",
+"Kırılganlıklarının güzelliği",
+"Her zaman doğruyu söylemen",
+"Yaşamına olan bağlılığın",
+"Hayat dolu olman",
+"Beni güvende hissettirmen",
+"Her zaman yanımda olman",
+"Dayanıklılığın",
+"Her şeyinle mükemmel olman",
+"Beni olduğum gibi kabul etmen",
+"Derin duyguların",
+"Sen"
+];
+
+let current = 0;
+
+function start() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("reasonScreen").style.display = "block";
+    showReason();
+}
+
+function showReason() {
+    const number = document.getElementById("number");
+    const reason = document.getElementById("reason");
+
+    document.getElementById("counter").textContent =
+        (current + 1) + " / 200";
+
+    number.textContent = current + 1;
+    reason.textContent = reasons[current];
+
+    number.classList.remove("show-number");
+    reason.classList.remove("show-reason");
+
+    void number.offsetWidth;
+    void reason.offsetWidth;
+
+    number.classList.add("show-number");
+    reason.classList.add("show-reason");
+
+    document.getElementById("progress").style.width =
+        ((current + 1) / 200 * 100) + "%";
+
+    document.getElementById("nextButton").textContent =
+        current === 199 ? "Son Sebep ❤️" : "Bir Sonraki Sebep ❤️";
+}
+
+function nextReason() {
+    if (current < 199) {
+        current++;
+        showReason();
+    } else {
+        document.getElementById("reasonScreen").style.display = "none";
+        document.getElementById("finalScreen").style.display = "block";
+
+        // 5 saniye sonra Son Olarak butonunu göster
+        setTimeout(() => {
+            document.getElementById("lastButton").style.display =
+                "inline-block";
+        }, 5000);
+    }
+}
+
+function openLastPage() {
+    document.getElementById("finalScreen").style.display = "none";
+    document.getElementById("lastPage").style.display = "block";
+}
+
+/* UÇUŞAN KALPLER */
+
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "floating-heart";
+    heart.textContent = Math.random() > .5 ? "♥" : "♡";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (14 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (7 + Math.random() * 7) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 15000);
+}
+
+setInterval(createHeart, 700);
+
+console.log("Toplam sebep sayısı:", reasons.length);
+
+</script>
+
+</body>
+</html>
